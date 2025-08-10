@@ -1,0 +1,544 @@
+--- Page 1 ---
+Edupro Intelligent Assistant: Product 
+Requirements Document 
+Executive Summary 
+This Product Requirements Document (PRD) outlines the evolution of edupro.ps, an AI-
+powered educational assistant designed to enhance the learning experience for both 
+students and educators. Currently, Edupro operates as a basic chatbot, providing 
+students with AI-generated answers to subject-related questions upon registration. 
+Students provide their name, email, and class details to access relevant subject 
+materials. 
+The strategic vision detailed in this document transforms Edupro into a comprehensive, 
+intelligent assistant. Key enhancements include AI-driven student level assessment, 
+personalized reports highlighting strengths and weaknesses for both students and 
+professors, and AI-assisted content creation tools for professors, such as question 
+generation and study plan development. 
+The technology stack supporting this evolution includes Laravel, Filament, MySQL, 
+Blade, HTML/CSS/JS, and the ChatGPT API, hosted on Injazat servers with the 
+edupro.ps domain. Future development will incorporate RAG (Retrieval Augmented 
+Generation) agent AI, microlearning modules, and a multi-tenant database architecture 
+to facilitate scalability and support advanced AI functionalities. The ultimate goal is to 
+create a more personalized and effective learning environment for all users. 
+1. Introduction 
+This Product Requirements Document (PRD) defines the requirements for the evolution 
+of edupro.ps, an online educational platform. Currently, edupro.ps offers a basic AI-
+powered chatbot system. This document details the necessary enhancements to 
+transform it into an advanced, intelligent assistant, providing personalized support for 
+students and valuable tools for professors. 
+The scope of this PRD encompasses both the immediate development phase and 
+future strategic improvements. It ensures that development teams and stakeholders 
+have a clear understanding of the project's goals. The primary aim is to leverage 
+artificial intelligence to personalize the learning experience for students by assessing 
+their levels and providing detailed reports on their strengths and weaknesses. 
+Furthermore, the enhanced platform will offer professors tools to streamline their 
+teaching processes. These tools include AI-assisted question generation and study plan 
+development. Future iterations will explore microlearning integration and more 
+sophisticated AI applications to further enrich the educational experience on edupro.ps.
+--- Page 2 ---
+2. Problem Statement 
+The current Edupro platform, while functional as a basic AI-powered Q&A chatbot, 
+possesses several limitations that hinder its potential to deliver a truly personalized and 
+effective learning experience. The existing system primarily serves as a reactive tool, 
+answering student queries based on registered subject matter. However, it lacks the 
+proactive and adaptive capabilities necessary to cater to individual student needs and 
+provide comprehensive support for educators. 
+• 
+Limited Student Insight: Students lack the ability to ascertain their current 
+academic level within a subject. Furthermore, the system does not provide 
+personalized reports identifying specific strengths and weaknesses, which are 
+crucial for targeted improvement. 
+• 
+Lack of Educator Support: Professors currently lack integrated tools to 
+automate content creation, such as AI-assisted question generation for 
+assessments or the development of comprehensive study plans. This increases 
+workload and potentially limits the variety and effectiveness of teaching 
+materials. 
+• 
+Absence of Holistic Performance View: The existing chatbot functionality 
+offers only a fragmented view of student performance, limited to individual 
+queries and responses. A holistic overview of student progress and areas 
+requiring attention is currently unavailable. 
+Addressing these limitations presents significant opportunities to transform Edupro into 
+a proactive and intelligent learning assistant. By implementing the enhancements 
+outlined in this document, Edupro can significantly improve educational outcomes for 
+both students and professors. 
+3. Goals and Objectives 
+The overarching goals of the edupro.ps enhancement project are threefold: to 
+significantly improve student learning outcomes through personalized AI support, to 
+empower professors with AI-driven tools for efficient content creation, and to establish 
+edupro.ps as a leading intelligent educational platform in the region. 
+3.1 Specific Objectives 
+• 
+Student Level Assessment: By Q3 2024, implement AI-driven student level 
+assessment capabilities with a target accuracy of 85% across core subjects. 
+• 
+Personalized Reporting: Enable AI-generated student progress reports for 
+professors, including strengths and weaknesses analysis, by Q4 2024. 
+• 
+AI-Assisted Question Generation: Develop a feature that allows professors to 
+generate practice questions based on specific topics and difficulty levels, 
+available by Q2 2025. 
+• 
+Study Plan Assistance: Provide professors with AI-assisted tools to create and 
+customize study plans, incorporating adaptive learning principles, by Q3 2025.
+--- Page 3 ---
+• 
+Microlearning Foundation: Lay the foundation for future microlearning 
+integration, including content tagging and delivery mechanisms, by Q4 2025. 
+4. Target Audience 
+The enhanced edupro.ps platform is designed to serve two primary target audiences: 
+students and professors. Secondary audiences include educational institutions and 
+administrators who benefit from improved educational outcomes and streamlined 
+processes. 
+4.1 Primary Audiences 
+• 
+Students: Primarily university and secondary school students who seek 
+personalized learning support. Their needs include: 
+– 
+Accurate self-assessment of their knowledge level. 
+– 
+Identification of strengths and weaknesses in specific subjects. 
+– 
+Tailored learning paths that address their individual needs. 
+– 
+Progress tracking and performance monitoring. 
+• 
+Professors: Educators at the university and secondary school levels who require 
+tools to enhance their teaching effectiveness. Their needs include: 
+– 
+Efficient generation of assessment questions. 
+– 
+Assistance in developing comprehensive and adaptive study plans. 
+– 
+Insights into student performance and areas requiring intervention. 
+– 
+Tools to streamline administrative tasks related to course management. 
+4.2 Secondary Audiences 
+• 
+Educational Institutions and Administrators: These stakeholders benefit from 
+the platform's ability to improve student outcomes, enhance teaching quality, and 
+provide data-driven insights into educational performance. 
+5. Current System Overview 
+The current edupro.ps platform functions as an AI-powered question and answer 
+system, providing students with immediate assistance within their registered subjects. 
+The system operates primarily through a chatbot interface, enabling students to pose 
+questions and receive AI-generated responses. 
+The user journey begins with student registration, where users provide their name, 
+email address, and class details. Upon successful registration, the system displays a list 
+of subjects relevant to the student's selected class. Students can then select a subject 
+and interact with the chatbot, posing questions related to the subject matter. The AI 
+processes the query and provides a relevant answer. 
+The technological foundation of the current system relies on web technologies including 
+Laravel, Blade, HTML, CSS, and JavaScript. The chatbot functionality is enabled 
+through integration with the ChatGPT API. The platform is currently hosted on Injazat
+--- Page 4 ---
+servers, accessible through the edupro.ps domain. This initial architecture provides a 
+solid base for the planned enhancements and future scalability. 
+6. Proposed System Features: AI-Powered 
+Student Support 
+The enhanced Edupro platform will incorporate advanced AI functionalities designed to 
+provide comprehensive and personalized support for students. These features go 
+beyond basic question answering, offering proactive assessment, personalized insights, 
+and adaptive learning recommendations. The AI will act as a personalized tutor and 
+analytical tool, empowering students to take ownership of their learning journey and 
+enabling professors to deliver more effective instruction. 
+6.1 AI-Driven Student Level Assessment 
+The system will leverage AI to continuously assess student academic levels across 
+various subjects. This assessment will be based on a variety of factors, including: 
+• 
+Performance on quizzes and assignments: Analyzing student responses to 
+identify areas of strength and weakness. 
+• 
+Interaction with the chatbot: Monitoring the types of questions asked and the 
+level of assistance required. 
+• 
+Engagement with learning materials: Tracking the amount of time spent on 
+different topics and resources. 
+The AI will use this data to generate a dynamic assessment of each student's 
+proficiency in different areas, providing a more accurate and nuanced understanding of 
+their academic standing than traditional grading methods. 
+6.2 Identification of Strengths and Weaknesses 
+Based on the continuous assessment data, the AI will identify individual student 
+strengths and weaknesses. This analysis will provide students with personalized 
+insights into their learning profile, highlighting areas where they excel and areas where 
+they need additional support. The system will present this information in an accessible 
+and actionable format, enabling students to focus their efforts on areas where they can 
+make the most significant improvements. 
+For example, if a student consistently struggles with questions related to a specific 
+concept, the AI will identify this as a weakness and recommend additional resources or 
+practice exercises to address the gap in knowledge. Conversely, if a student 
+consistently performs well in a particular area, the AI will recognize this as a strength 
+and suggest more challenging activities to further enhance their skills.
+--- Page 5 ---
+6.3 Personalized Academic Reports for Professors 
+The AI will generate personalized academic reports for professors, summarizing student 
+progress, engagement, and areas needing improvement. These reports will provide 
+professors with valuable insights into the learning needs of their students, enabling 
+them to tailor their instruction to better meet those needs. The reports will include: 
+• 
+Overall student performance: A summary of the student's academic level and 
+progress across different subjects. 
+• 
+Strengths and weaknesses analysis: A detailed breakdown of the student's 
+strengths and weaknesses in specific areas. 
+• 
+Engagement metrics: Data on the student's interaction with the platform, 
+including the amount of time spent on different activities and the frequency of 
+chatbot usage. 
+• 
+Recommendations for intervention: Suggestions for how professors can 
+provide targeted support to students who are struggling. 
+6.4 Adaptive Learning Paths and Recommendations 
+Based on the identified needs of each student, the AI will offer adaptive learning paths 
+and recommendations. This means that the system will automatically adjust the difficulty 
+level and content of the learning materials to match the student's individual skill level. 
+Students who are struggling with a particular topic will be provided with more basic 
+materials and practice exercises, while students who are excelling will be challenged 
+with more advanced content. 
+The AI will also recommend specific resources and activities that are tailored to each 
+student's learning style and preferences. For example, students who learn best through 
+visual aids may be recommended to watch videos or view infographics, while students 
+who prefer hands-on learning may be encouraged to complete interactive simulations or 
+experiments. 
+7. Proposed System Features: AI-Powered 
+Professor Tools 
+The enhanced Edupro platform will provide professors with AI-powered tools to 
+streamline their workflows and enhance the quality of educational materials. These tools 
+focus on automating content creation and providing data-driven insights to personalize 
+instruction. 
+7.1 AI-Driven Question Generation 
+Professors can leverage AI to generate varied and relevant questions for assessments. 
+This feature will allow professors to input specific topics or learning objectives, and the 
+AI will generate a range of question types, including multiple-choice, short answer, and 
+essay questions.
+--- Page 6 ---
+The AI will consider the difficulty level specified by the professor and ensure that the 
+generated questions align with the intended learning outcomes. This feature aims to 
+reduce the time and effort required to create high-quality assessments, while also 
+ensuring that the questions are relevant and challenging for students. 
+7.2 AI-Assisted Study Plan Development 
+The system will provide AI assistance in outlining course study plans. Professors can 
+input curriculum requirements and student needs, and the AI will suggest topics, pacing, 
+and resource allocation. The AI will also consider factors such as the length of the 
+course, the prior knowledge of students, and the availability of resources when 
+generating the study plan. 
+The generated study plans can be customized by the professor to meet their specific 
+needs and preferences. This feature aims to help professors create comprehensive and 
+effective study plans that maximize student learning outcomes, while also reducing the 
+amount of time and effort required for plan development. 
+By automating these tasks, professors can dedicate more time to direct student 
+interaction and personalized instruction. 
+8. Future Integration: Personalized Learning 
+Paths & Microlearning 
+The long-term vision for edupro.ps includes advanced personalized learning paths and 
+the integration of microlearning modules. While not part of the initial development 
+phase, the platform's architecture will be designed with extensibility in mind to 
+seamlessly support these features in the future. 
+Microlearning, in this context, refers to the delivery of learning content in small, focused 
+modules. These modules will address specific student weaknesses identified by the AI 
+assessment system. For example, if a student struggles with a particular grammatical 
+concept in English, a microlearning module focusing specifically on that concept will be 
+presented. These modules could include short videos, interactive quizzes, or concise 
+textual explanations. 
+Ultimately, AI will be instrumental in tailoring learning paths with even greater 
+granularity. Instead of broad subject areas, the system will deliver bite-sized content 
+and assessments designed to reinforce understanding and address specific skill gaps. 
+This approach ensures that students receive the most relevant and impactful learning 
+experience possible, maximizing their engagement and knowledge retention. The 
+system will adapt in real-time based on student performance within the microlearning 
+modules, ensuring continuous improvement and personalized support.
+--- Page 7 ---
+9. Technical Architecture & Stack 
+The edupro.ps platform is built on a robust and scalable technical architecture, 
+leveraging a combination of proven and cutting-edge technologies. This architecture is 
+designed to support the current functionality and accommodate future growth and 
+feature enhancements, including RAG agent AI and multi-tenant database capabilities. 
+• 
+Backend Framework: Laravel, a PHP framework known for its elegance, 
+security, and rich feature set, forms the backbone of the platform. Laravel 
+provides a solid foundation for building complex web applications with clean and 
+maintainable code. 
+• 
+Administrative Panel: Filament, a Laravel package, is utilized for the 
+administrative panel and backend interface. Filament provides a user-friendly 
+and efficient way to manage data, users, and other administrative tasks. 
+• 
+Database System: MySQL, a widely used open-source relational database 
+management system, stores all platform data, including user information, subject 
+content, and AI-generated reports. 
+• 
+Frontend Technologies: The frontend is built using a combination of Blade 
+templating engine (integrated with Laravel), HTML, CSS, and JavaScript. Blade 
+enables dynamic content rendering, while HTML, CSS, and JavaScript provide 
+the structure, styling, and interactivity of the user interface. 
+• 
+AI Integration: A crucial component of the architecture is the integration of the 
+ChatGPT API. This API is used to power various AI functionalities, including the 
+chatbot, student level assessment, report generation, and AI-assisted content 
+creation for professors. 
+• 
+Hosting Environment: The platform is hosted on Injazat servers, ensuring 
+reliable performance and security. The domain name for the platform is 
+edupro.ps. 
+The integration of these technologies allows for seamless interaction between the 
+frontend user interface, the backend logic, the database, and the AI engine. This 
+ensures that the platform is able to deliver a personalized and effective learning 
+experience for both students and professors. The architecture is also designed to be 
+scalable, allowing the platform to handle increasing traffic and data volumes as the user 
+base grows. 
+10. Future Technical Roadmap & AI Evolution 
+The future of edupro.ps hinges on continuous technological advancement, particularly in 
+the realm of Artificial Intelligence. Two key initiatives are planned to significantly 
+enhance the platform's capabilities: the integration of a RAG (Retrieval Augmented 
+Generation) Agent AI model and the implementation of a multi-tenant database 
+architecture.
+--- Page 8 ---
+10.1 RAG (Retrieval Augmented Generation) Agent AI 
+The integration of a RAG Agent AI model will revolutionize the accuracy and reliability of 
+the platform's AI-driven responses. Unlike the current model that relies solely on pre-
+trained knowledge, RAG will augment its knowledge by retrieving relevant information 
+from a curated knowledge base before generating a response. This knowledge base will 
+consist of authoritative sources, such as subject-specific textbooks, university curricula, 
+and peer-reviewed articles. 
+By grounding its responses in verifiable information, RAG significantly reduces the risk 
+of "AI hallucinations"—instances where the AI generates incorrect or nonsensical 
+information. The retrieval process ensures that the AI has access to the most up-to-date 
+and contextually relevant information, leading to more accurate and reliable answers for 
+students and more dependable assistance for professors. 
+10.2 Multi-Tenant Database Architecture 
+To support future scalability and potential partnerships with multiple educational 
+institutions, edupro.ps will transition to a multi-tenant database architecture. This 
+architecture allows multiple distinct tenants (e.g., universities, departments) to use the 
+same core infrastructure while maintaining complete data isolation and security. Each 
+tenant will have its own dedicated database schema, ensuring that data is not shared or 
+commingled between different institutions. 
+This approach offers several key benefits. It reduces the operational overhead of 
+managing separate instances for each institution, simplifies platform maintenance and 
+updates, and enables efficient resource utilization. Furthermore, it provides a flexible 
+and scalable foundation for future growth, allowing the platform to easily onboard new 
+tenants without compromising performance or security. The multi-tenant architecture will 
+be crucial for expanding the reach and impact of edupro.ps across the broader 
+educational landscape. 
+11. User Stories / Use Cases 
+These user stories illustrate the new functionalities from the perspective of both 
+students and professors, highlighting the value and practicality of the enhanced Edupro 
+platform. 
+11.1 Student User Stories 
+• 
+As a student, I want the AI to assess my level in Mathematics, so I know where I 
+stand and what areas I need to improve. 
+• 
+As a student, I want the AI to identify my weak areas in Physics, like 
+'Electromagnetism,' so I can focus my study and improve my understanding of 
+those specific concepts. 
+• 
+As a student, I want the AI to generate a summary report of my progress in 
+Biology for my professor, so they can better understand my learning trajectory.
+--- Page 9 ---
+• 
+As a student, I want the AI to recommend relevant microlearning modules based 
+on my identified weaknesses in Chemistry, allowing me to quickly grasp difficult 
+concepts. 
+• 
+As a student, I want to track my progress over time through visual dashboards, 
+so I can see how much I've improved and stay motivated. 
+11.2 Professor User Stories 
+• 
+As a professor, I want the AI to generate 10 multiple-choice questions on 
+'Quantum Mechanics' for my upcoming quiz, saving me time and ensuring the 
+questions are challenging and relevant. 
+• 
+As a professor, I want the AI to help me outline a study plan for 'Introduction to 
+Programming' course covering 12 weeks, ensuring all key concepts are covered 
+and the pacing is appropriate for my students. 
+• 
+As a professor, I want to receive AI-generated reports on student performance 
+in my Calculus course, so I can identify students who are struggling and provide 
+targeted support. 
+• 
+As a professor, I want to be able to customize the AI-generated study plans to 
+match my teaching style and the specific needs of my students. 
+• 
+As a professor, I want the AI to suggest relevant readings and resources to 
+include in my course syllabus, ensuring my students have access to the best 
+possible learning materials. 
+12. Non-Functional Requirements 
+The following non-functional requirements are critical to the success of the enhanced 
+edupro.ps platform. These requirements define the quality attributes of the system, 
+ensuring it meets the needs of its users and operates reliably and securely. 
+• 
+Performance: 
+– 
+AI query response times should be under 3 seconds for basic queries and 
+under 7 seconds for complex analysis or report generation. 
+– 
+Page load times should not exceed 2 seconds. 
+• 
+Security: 
+– 
+All sensitive data, including user credentials and personal information, 
+must be encrypted both in transit and at rest. 
+– 
+Robust user authentication mechanisms, including secure email 
+registration and password management, must be implemented. 
+– 
+Strict authorization controls to ensure users only access data and features 
+appropriate to their roles (student or professor). 
+– 
+The application must be protected against common web vulnerabilities 
+such as SQL injection, cross-site scripting (XSS), and cross-site request 
+forgery (CSRF). 
+• 
+Scalability:
+--- Page 10 ---
+– 
+The system must be able to handle a concurrent user base of at least 
+10,000 students and 1,000 professors without performance degradation. 
+– 
+The database architecture should be designed to accommodate 
+increasing data volumes, especially with the future implementation of 
+multi-tenancy. 
+• 
+Usability: 
+– 
+The user interface must be intuitive and easy to navigate for both students 
+and professors, with clear labeling and consistent design. 
+– 
+The platform should provide helpful guidance and tutorials to assist users 
+in utilizing its features effectively. 
+• 
+Reliability: 
+– 
+The platform should maintain an uptime of 99.9%. 
+– 
+Comprehensive error handling and logging mechanisms should be in 
+place to quickly identify and resolve issues. 
+• 
+Accessibility: 
+– 
+The platform must comply with Web Content Accessibility Guidelines 
+(WCAG) 2.1 Level AA to ensure it is accessible to users with disabilities. 
+13. Key Performance Indicators (KPIs) & 
+Success Metrics 
+The success of Edupro's enhancements will be evaluated using the following KPIs and 
+success metrics: 
+• 
+Student Engagement: 
+– 
+Target: 30% increase in active student users within 6 months of launch. 
+– 
+Target: Average session duration of 15 minutes per student. 
+– 
+Metric: Rate of personalized report generation (e.g., 80% of active 
+students generate a report monthly). 
+• 
+Learning Effectiveness: 
+– 
+Target: 10% improvement in student assessment scores (pre- and post- 
+Edupro usage). 
+– 
+Metric: Student satisfaction with AI feedback (measured via surveys, 
+target: average rating of 4/5). 
+• 
+Professor Efficiency: 
+– 
+Metric: Number of questions generated by AI per professor per month. 
+– 
+Target: 20% time saved on study plan creation (estimated via professor 
+feedback). 
+– 
+Metric: Professor satisfaction with AI tools (measured via surveys, target: 
+average rating of 4/5). 
+• 
+Technical Performance: 
+– 
+Target: System uptime of 99.9%. 
+– 
+Target: Average API response time under 2 seconds.
+--- Page 11 ---
+14. Release Plan & Phased Rollout 
+The release of new edupro.ps features will follow a phased rollout strategy to manage 
+complexity, gather user feedback, and enable rapid iteration. 
+14.1 Phase 1: MVP Launch 
+• 
+Focus: Core AI enhancements for students, including level assessment, 
+weakness/strength identification, and basic reports. Initial professor tools for AI-
+assisted question generation may be included. 
+• 
+Objective: Validate core AI functionality and gather initial user feedback. 
+14.2 Phase 2: Expanded Professor Tools & Refined 
+Reporting 
+• 
+Focus: Expand professor tools to include AI-assisted study plan development. 
+Refine student reporting based on initial feedback. Introduce early microlearning 
+concepts (e.g., content tagging). 
+• 
+Objective: Enhance professor utility and refine student support mechanisms. 
+14.3 Phase 3: Advanced AI & Multi-Tenancy 
+• 
+Focus: Incorporate RAG Agent AI for improved accuracy. Implement multi-tenant 
+database architecture. 
+• 
+Objective: Enhance AI capabilities and prepare the platform for scalability and 
+broader adoption. 
+This phased approach allows for continuous monitoring, evaluation, and refinement of 
+the platform, ensuring alignment with user needs and optimal performance at each 
+stage of development. 
+15. Risks & Dependencies 
+The successful development and deployment of the enhanced edupro.ps platform are 
+subject to certain risks and dependencies, which require careful management and 
+mitigation strategies. 
+• 
+Technical Challenges with AI Integration: Risk of inaccuracies or limitations in 
+AI-driven features (assessment, content generation). Mitigation: Rigorous testing, 
+prompt engineering refinement, and fallback mechanisms. 
+• 
+Data Privacy Concerns: Risk of violating student data privacy regulations. 
+Mitigation: Implement strict data anonymization and security protocols, ensuring 
+compliance with relevant laws. 
+• 
+User Adoption Rates: Risk of low adoption rates among students or professors. 
+Mitigation: Conduct user research, provide comprehensive training, and offer 
+incentives for early adoption.
+--- Page 12 ---
+• 
+Dependency on External APIs (ChatGPT): Reliance on third-party API 
+availability and performance. Mitigation: Establish service level agreements, 
+monitor API performance, and explore alternative AI providers. 
+• 
+Internal Team Availability: Dependency on the availability of developers, 
+designers, and QA engineers. Mitigation: Implement resource planning and 
+cross-training to minimize disruptions. 
+• 
+Server Infrastructure Readiness (Injazat): Dependency on Injazat servers for 
+adequate performance and stability. Mitigation: Collaborate closely with Injazat, 
+conduct load testing, and establish clear communication channels. 
+16. Assumptions & Constraints 
+The following assumptions and constraints are critical to the planning and execution of 
+this project. 
+Assumptions: 
+• 
+Continued availability and stable performance of the ChatGPT API. 
+• 
+Sufficient computational resources will be available on the Injazat server. 
+• 
+Students and professors will be receptive to adopting the new AI tools. 
+• 
+Ongoing access to relevant domain knowledge for AI model training. 
+Constraints: 
+• 
+Budget limitations that may impact feature scope or technology choices. 
+• 
+A fixed project timeline influences development priorities. 
+• 
+Reliance on specific technologies (Laravel, Filament, MySQL, Blade). 
+• 
+Compliance with data privacy laws in Palestine or relevant regions, which may 
+restrict data collection and usage. 
+17. Appendices & Glossary 
+This section serves as a placeholder for supplementary materials. It would typically 
+contain a Glossary of Terms, defining specific technical or educational jargon used in 
+the document, and a References section, listing any external documents, research, or 
+specifications cited. For the purposes of this document, these detailed sections are not 
+populated but would provide additional context and resources in a complete product 
+requirements document.
